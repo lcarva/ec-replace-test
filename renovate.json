@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "tekton": {
-    "fileMatch": ['\\.yaml$', '\\.yml$']
+    "fileMatch": ["\\.yaml$", "\\.yml$"]
   }
 }
