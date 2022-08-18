@@ -1,1 +1,1 @@
-ref: gcr.io/tekton-releases/catalog/upstream/buildah:0.3
+ref: gcr.io/tekton-releases/catalog/upstream/buildah:0.3@sha256:913698b82ef9e442444d8129bbcaaaa0b4cfd8158d0cb93dcc67d0b9b95d92a5
