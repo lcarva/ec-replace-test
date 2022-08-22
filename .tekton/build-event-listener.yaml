@@ -45,6 +45,29 @@ spec:
       workspaces:
       - name: shared
         emptyDir: {}
+  - apiVersion: tekton.dev/v1beta1
+    kind: TaskRun
+    metadata:
+      generateName: git-clone-resolution-$(tt.params.git-repo-name)-
+    spec:
+      serviceAccountName: pipeline
+      taskRef:
+        resolver: bundles
+        resource:
+        - name: bundle
+          value: gcr.io/tekton-releases/catalog/upstream/git-clone:0.1
+        - name: name
+          value: git-clone
+        - name: kind
+          value: task
+      params:
+      - name: url
+        value: $(tt.params.git-repo)
+      - name: revision
+        value: $(tt.params.git-revision)
+      workspaces:
+      - name: shared
+        emptyDir: {}
 ---
 apiVersion: triggers.tekton.dev/v1beta1
 kind: Trigger
