@@ -34,7 +34,7 @@ spec:
     spec:
       serviceAccountName: pipeline
       taskRef:
-        bundle: gcr.io/tekton-releases/catalog/upstream/git-clone:0.1
+        bundle: gcr.io/tekton-releases/catalog/upstream/git-clone:0.8@sha256:f51ca50f1c065acba8290ef14adec8461915ecc5f70a8eb26190c6e8e0ededaf
         kind: Task
         name: git-clone
       params:
