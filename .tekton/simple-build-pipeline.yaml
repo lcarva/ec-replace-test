@@ -32,7 +32,7 @@ spec:
   tasks:
   - name: git-clone
     taskRef:
-      bundle: gcr.io/tekton-releases/catalog/upstream/git-clone:0.1
+      bundle: gcr.io/tekton-releases/catalog/upstream/git-clone:0.8@sha256:dabe1da70ee8ef9263bf9c3ae623748f2769e67322393cecc1c8c20dfe5afbe2
       kind: Task
       name: git-clone
     params:
@@ -47,7 +47,7 @@ spec:
     runAfter:
     - git-clone
     taskRef:
-      bundle: gcr.io/tekton-releases/catalog/upstream/trivy-scanner:0.1
+      bundle: gcr.io/tekton-releases/catalog/upstream/trivy-scanner:0.1@sha256:e4c2916f25ce2d42ec7016c3dc3392e527442c307f43aae3ea63f4622ee5cfe4
       kind: Task
       name: trivy-scanner
     params:
@@ -63,7 +63,7 @@ spec:
     runAfter:
     - source-security-scan
     taskRef:
-      bundle: gcr.io/tekton-releases/catalog/upstream/buildah:0.3
+      bundle: gcr.io/tekton-releases/catalog/upstream/buildah:0.5@sha256:19a2de62a337be6b477a2a9f4e26dcb5b9e712d3539b72d78c3f726d0f411b06
       kind: Task
       name: buildah
     params:
