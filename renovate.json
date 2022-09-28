@@ -5,8 +5,7 @@
     "pinDigests": true,
     "packageRules": [
       {
-        "matchPackagePatterns": ["gcr.io/tekton-releases/catalog/upstream"],
-        "groupName": "tekton-catalog"
+        "matchPackagePatterns": ["quay.io/redhat-appstudio/appstudio-tasks"],
       }
   ]
   }
