@@ -4,12 +4,6 @@
   "schedule": ["before 10pm"],
   "tekton": {
     "fileMatch": ["\\.yaml$", "\\.yml$"],
-    "pinDigests": true,
-    "packageRules": [
-      {
-        "matchPackagePatterns": ["gcr.io/tekton-releases/catalog/upstream"],
-        "groupName": "tekton-catalog"
-      }
-  ]
+    "pinDigests": true
   }
 }
