@@ -1,12 +1,13 @@
+---
 name: Merge me!
 
-on:
+"on":
   workflow_run:
     types:
       - completed
     workflows:
       # List all required workflow names here.
-      - 'pre-merge-ci'
+      - 'YAML Lint'
 
 jobs:
   merge-me:
