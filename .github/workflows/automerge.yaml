@@ -4,7 +4,6 @@ name: automerge
   check_run:
     types:
       - completed
-  status: {}
 jobs:
   automerge:
     runs-on: ubuntu-latest
