@@ -1,7 +1,10 @@
 ---
 name: 'YAML Lint'
 "on":
-  - pull_request
+  pull_request: {}
+  push:
+    branches:
+      - main
 jobs:
   yamllint:
     name: 'YAML Lint'
