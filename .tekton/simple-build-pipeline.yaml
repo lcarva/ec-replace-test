@@ -32,7 +32,7 @@ spec:
   tasks:
     - name: git-clone
       taskRef:
-        bundle: gcr.io/tekton-releases/catalog/upstream/git-clone:0.9@sha256:a31b3b89b81a9eb27044cf7e8d308c1f2f41bae18d4cfb366de40cd1cb0604b1
+        bundle: gcr.io/tekton-releases/catalog/upstream/git-clone:0.9@sha256:1ee0f45892faf152aa631b0745f192e353c684408286bc55e9041edfaf22cb5e
         kind: Task
         name: git-clone
       params:
