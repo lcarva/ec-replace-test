@@ -10,7 +10,7 @@ name: Enalbe auto-merge
 jobs:
   enable-auto-merge:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.user.login == 'appstudio-staging-ci[bot]'
+    if: github.event.pull_request.user.login == 'lcarva'
     steps:
       - id: automerge
         name: automerge
