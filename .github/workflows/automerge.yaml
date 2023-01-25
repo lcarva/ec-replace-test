@@ -1,17 +1,19 @@
 ---
-name: automerge
+name: Enalbe auto-merge
 "on":
-  check_run:
+  pull_request:
     types:
-      - completed
+      - opened
+      - reopened
+    branches:
+      - main
 jobs:
-  automerge:
+  enable-auto-merge:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'appstudio-staging-ci[bot]'
     steps:
       - id: automerge
         name: automerge
-        uses: "pascalgn/automerge-action@v0.15.5"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: ""
-          MERGE_FILTER_AUTHOR: lcarva
+        uses: alexwilson/enable-github-automerge-action@main
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
