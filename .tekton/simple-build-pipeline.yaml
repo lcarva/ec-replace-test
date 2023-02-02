@@ -63,7 +63,7 @@ spec:
       runAfter:
         - source-security-scan
       taskRef:
-        bundle: gcr.io/tekton-releases/catalog/upstream/buildah:0.5@sha256:342959a01c2453def4dc8d4843de25832fc6c3fe36aecfe3cb7215e60a58ea73
+        bundle: gcr.io/tekton-releases/catalog/upstream/buildah:0.5@sha256:ccae4dfdbd085323ddfff00468b0680c1739990a73b82753e9d4271a584a33b6
         kind: Task
         name: buildah
       params:
