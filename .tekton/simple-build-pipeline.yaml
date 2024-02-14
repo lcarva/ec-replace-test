@@ -47,7 +47,7 @@ spec:
       runAfter:
         - git-clone
       taskRef:
-        bundle: gcr.io/tekton-releases/catalog/upstream/trivy-scanner:0.2@sha256:a1e4b9950f25dc7b43984c6ce978d68057e6f8349ebdc785b856acc4b5c34740
+        bundle: gcr.io/tekton-releases/catalog/upstream/trivy-scanner:0.2@sha256:a1845cb87bbf30f80abb3a6aeddf39b3d6d94b64f29bda032807c5eeac4b94ac
         kind: Task
         name: trivy-scanner
       params:
@@ -63,7 +63,7 @@ spec:
       runAfter:
         - source-security-scan
       taskRef:
-        bundle: gcr.io/tekton-releases/catalog/upstream/buildah:0.5@sha256:ccae4dfdbd085323ddfff00468b0680c1739990a73b82753e9d4271a584a33b6
+        bundle: gcr.io/tekton-releases/catalog/upstream/buildah:0.7@sha256:1167b2507152f15f3828dbdcb8e1eaaf15e8ca7e0962240f0742bc4e8e7372c6
         kind: Task
         name: buildah
       params:
@@ -77,7 +77,7 @@ spec:
     - name: image-security-scan
       taskRef:
         name: trivy-scanner
-        bundle: gcr.io/tekton-releases/catalog/upstream/trivy-scanner:0.2@sha256:a1e4b9950f25dc7b43984c6ce978d68057e6f8349ebdc785b856acc4b5c34740
+        bundle: gcr.io/tekton-releases/catalog/upstream/trivy-scanner:0.2@sha256:a1845cb87bbf30f80abb3a6aeddf39b3d6d94b64f29bda032807c5eeac4b94ac
       params:
         - name: ARGS
           value:
